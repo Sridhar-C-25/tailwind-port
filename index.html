@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="dark:text-gray-200 dark:bg-slate-900">
+    <header
+      class="fixed xl:block w-full py-4 lg:px-0 px-5 z-[999] duration-300"
+    >
+      <nav class="flex justify-between items-center max-w-6xl mx-auto px-2">
+        <div class="flex gap-4 items-center">
+          <div
+            class="bg-primary text-white rounded-full size-10 text-xl grid place-items-center"
+          >
+            R
+          </div>
+          <div>
+            <h4 class="font-bold text-lg uppercase">Robin</h4>
+            <p class="text-xs">Profile</p>
+          </div>
+        </div>
+        <ul class="gap-10 md:flex hidden hover:*:text-primary *:duration-200">
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#about">About Us</a>
+          </li>
+          <li>
+            <a href="#projects">Projects</a>
+          </li>
+          <li>
+            <a href="#contact">Contact Us</a>
+          </li>
+          <li class="theme-switch">
+            <i class="fa-solid fa-circle-half-stroke cursor-pointer"></i>
+          </li>
+        </ul>
+        <div class="flex items-center gap-6">
+          <button class="btn btn-outline md:!flex !hidden">
+            <i class="fa-regular fa-paper-plane"></i> Let's Talk
+          </button>
+          <span class="theme-switch md:hidden">
+            <i class="fa-solid fa-circle-half-stroke cursor-pointer"></i>
+          </span>
+          <span id="menubar" class="cursor-pointer md:hidden text-xl">
+            <i class="fa-solid fa-bars"></i>
+          </span>
+        </div>
+      </nav>
+    </header>
+
+    <span
+      id="backdrop"
+      class="fixed h-screen hidden bg-black/10 backdrop-blur-sm z-[997] inset-0 w-full"
+    ></span>
+
+    <ul
+      id="mobile-nav"
+      class="gap-10 text-xl md:hidden dark:bg-slate-800 bg-primary text-white flex-center flex-col fixed w-full h-0 overflow-hidden bottom-0 duration-200 rounded-t-3xl left-0 z-[998]"
+    >
+      <li>
+        <a href="#home">Home</a>
+      </li>
+      <li>
+        <a href="#about">About Us</a>
+      </li>
+      <li>
+        <a href="#projects">Projects</a>
+      </li>
+      <li>
+        <a href="#contact">Contact Us</a>
+      </li>
+      <button class="btn btn-outline">
+        <i class="fa-regular fa-paper-plane"></i> Let's Talk
+      </button>
+    </ul>
+    <section
+      id="home"
+      class="min-h-screen container grid place-items-center relative overflow-hidden before:absolute before:top-0 before:start-1/2 before:bg-[url('https://preline.co/assets/svg/examples/polygon-bg-element.svg')] before:bg-no-repeat before:bg-top before:size-full before:-z-[1] before:transform before:-translate-x-1/2 dark:before:bg-[url('https://preline.co/assets/svg/examples-dark/polygon-bg-element.svg')]"
+    >
+      <div
+        class="w-full pt-20 grid md:grid-cols-6 h-full items-center max-w-6xl justify-around"
+      >
+        <div
+          class="lg:col-span-2 sm:pl-2 md:col-span-3 md:text-left text-center"
+        >
+          <div>
+            <h5 class="font-medium text-gray-600 dark:text-gray-200">
+              Hello Welcome
+            </h5>
+            <h1
+              class="sm:text-5xl text-4xl dark:text-white !leading-normal relative font-medium"
+            >
+              I'm <span class="text-primary">Robin</span> <br />
+              Website Designer
+            </h1>
+            <button class="btn btn-filled mt-5">
+              <i class="fa-regular fa-envelope"></i> Hire Me
+            </button>
+            <button
+              class="font-semibold dark:text-gray-200 border-b-2 border-gray-700 ml-4"
+            >
+              <i class="fa-solid fa-up-right-from-square"></i> See Portfolio
+            </button>
+          </div>
+          <div class="md:w-96 md:ml-auto flex mt-9 gap-2 dark:text-gray-300">
+            <i class="fa-solid fa-border-all mt-0.5 md:inline-block hidden"></i>
+            <p class="text-xs text-balance leading-5 max-w-md px-2 mx-auto">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. At,
+              architecto debitis molestias doloremque labore autem dolorem in
+              eius obcaecati! Amet beatae omnis.
+            </p>
+          </div>
+          <div
+            class="flex items-center md:justify-end justify-center dark:text-gray-200 text-gray-600 gap-6 mt-9"
+          >
+            <p class="text-xs">Follow Us</p>
+            <div class="flex justify-end gap-3">
+              <a href="#" class="social-icon">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-2 md:col-span-3">
+          <img
+            src="./assets/Group 1 (1).png"
+            class="w-2/3 mx-auto md:w-full max-w-96 md:mt-0 mt-5"
+            alt=""
+          />
+        </div>
+        <div
+          class="lg:col-span-2 md:col-span-6 lg:bg-gradient-to-l md:bg-none mt-2 bg-gradient-to-l dark:from-slate-800 from-gray-100 lg:h-96 md:h-auto h-96 w-full"
+        >
+          <ul
+            class="text-2xl data-[slot=count]:*:text-3xl data-[slot=count]:*:font-bold leading-[3.14rem] text-center pt-5 lg:block md:flex items-center justify-between"
+          >
+            <li data-slot="count">12+</li>
+            <li>Year of <span class="text-primary">Experience</span></li>
+            <br />
+            <li data-slot="count">8+</li>
+            <li>Completed <span class="text-primary">Projects</span></li>
+            <li>
+              <button class="btn btn-outline lg:mt-10 md:mt-0 mt-10">
+                <i class="fa-solid fa-download"></i> Download CV
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- About -->
+    <section id="about" class="container min-h-screen flex-center">
+      <div class="">
+        <div class="text-center text-balance">
+          <h3>What I Know</h3>
+          <p class="px-2 mt-3 text-gray-500">
+            Lorem ipsum, dolor quam recusandae molestias a consectetur illum aut
+            iste dolore. sit amet consectetur adipisicing elit. Dicta eligendi
+            voluptate eos rem maiores voluptas mollitia debitis natus impedit
+            excepturi quasi, quam recusandae molestias a consectetur illum aut
+            iste dolore.
+          </p>
+        </div>
+        <div
+          class="max-w-2xl grid md:grid-cols-1 gap-6 px-2 sm:grid-cols-3 *:text-lg *:sm:max-w-full *:max-w-sm hover:*:brightness-90 *:mx-auto *:sm:text-left *:text-center *:hover:cursor-pointer *:shadow-sm mt-10 mx-auto *:rounded-xl *:bg-gray-100 *:dark:bg-slate-800 *:p-7 *:flex *:md:flex-row *:flex-col *:items-center *:gap-12"
+        >
+          <div>
+            <div class="*:text-primary">
+              <i class="fa-regular fa-object-ungroup"></i>
+              <h6 class="font-semibold whitespace-nowrap mt-3">
+                Website Design
+              </h6>
+            </div>
+            <div>
+              <p
+                class="text-xs text-gray-600 dark:text-gray-400 leading-5 text-balance"
+              >
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
+                corporis tempora possimus?
+              </p>
+            </div>
+            <i
+              class="fa-solid fa-arrow-up-long text-primary rotate-45 cursor-pointer"
+            ></i>
+          </div>
+          <div>
+            <div class="*:text-primary">
+              <i class="fa-solid fa-pen-nib"></i>
+              <h6 class="font-semibold whitespace-nowrap mt-3">Ui Ux Design</h6>
+            </div>
+            <div>
+              <p
+                class="text-xs text-gray-600 dark:text-gray-400 leading-5 text-balance"
+              >
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
+                corporis tempora possimus?
+              </p>
+            </div>
+            <i
+              class="fa-solid fa-arrow-up-long text-primary rotate-45 cursor-pointer"
+            ></i>
+          </div>
+          <div>
+            <div class="*:text-primary">
+              <i class="fa-solid fa-people-group"></i>
+              <h6 class="font-semibold whitespace-nowrap mt-3">Teams Play</h6>
+            </div>
+            <div>
+              <p
+                class="text-xs text-gray-600 dark:text-gray-400 leading-5 text-balance"
+              >
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
+                corporis tempora possimus?
+              </p>
+            </div>
+            <i
+              class="fa-solid fa-arrow-up-long text-primary rotate-45 cursor-pointer"
+            ></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Projects -->
+    <section id="projects" class="container min-h-screen flex-center">
+      <div class="text-center text-balance">
+        <h3>My Projects</h3>
+        <p class="px-2 mt-3 text-gray-500">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime itaque
+          totam, ut asperiores placeat saepe earum molestias deleniti,
+          repudiandae animi sit laudantium aliquam delectus assumenda numquam
+          ab. Dolorum, illo laborum!
+        </p>
+
+        <br />
+        <div class="flex-center gap-4">
+          <button class="btn btn-filled">Website</button>
+          <button class="btn btn-outline">Mobile App</button>
+          <button class="btn btn-outline">Figma</button>
+        </div>
+        <br />
+        <div
+          class="*:w-full grid mx-auto md:grid-rows-2 md:grid-cols-2 max-w-4xl md:px-0 px-10 *:h-full *:object-cover *:border-4 *:dark:border-white *:rounded-md gap-4 *:cursor-pointer group hover:*:!grayscale-0 *:hover:grayscale *:duration-1000"
+        >
+          <img class="" src="./assets/pro1.jpg" alt="" />
+          <img src="./assets/pro3.jpg" class="row-span-2" alt="" />
+          <img src="./assets/pro2.jpg" class="" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials"></section>
+    <!-- Contact -->
+    <section
+      id="contact"
+      class="container relative max-w-4xl mx-auto min-h-screen flex-center px-5"
+    >
+      <div class="pb-10">
+        <div class="text-center">
+          <h3>Contact Me</h3>
+          <p class="px-2 mt-3 text-gray-500">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+            itaque totam, ut asperiores placeat saepe earum molestias deleniti,
+            repudiandae animi sit laudantium aliquam delectus assumenda numquam
+            ab. Dolorum, illo laborum!
+          </p>
+        </div>
+        <div
+          class="mt-12 md:relative flex flex-col gap-5 sm:max-w-full mx-auto max-w-xs"
+        >
+          <div
+            class="dark:bg-slate-800 bg-slate-50 dark:text-gray-100 text-gray-800 rounded-lg shadow-xl mx-auto md:w-2/3 py-14 px-7 w-full"
+          >
+            <h3 class="font-semibold text-3xl">
+              Send Us A <br /><span class="text-primary">Message</span>
+            </h3>
+            <form class="*:flex *:flex-col *:gap-1 mt-5 md:w-2/3 w-full">
+              <div class="">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name" />
+              </div>
+              <div class="">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Enter your email address"
+                />
+              </div>
+              <div class="">
+                <label for="msg">Message</label>
+                <textarea id="msg" placeholder="Enter your message"></textarea>
+              </div>
+              <button class="btn btn-filled ml-auto">Send to Us</button>
+            </form>
+          </div>
+          <div
+            class="dark:bg-gray-700 bg-white py-12 px-7 md:absolute lg:-right-9 right-28 rounded-xl shadow-xl md:w-2/5 h-5/6 top-28 w-full mx-auto"
+          >
+            <h3 class="font-semibold text-2xl border-b pb-4 border-gray-600">
+              Drop In Our <br />Office <span class="text-primary">.</span>
+            </h3>
+            <div class="py-4">
+              <p class="text-xs text-gray-400 leading-5">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Accusamus nihil expedita voluptate corporis doloremque id,
+                facilis
+              </p>
+              <ul class="*:flex *:gap-4 *:items-center *:mt-4">
+                <li>
+                  <i class="fa-solid fa-location-dot"></i>
+                  <div>
+                    <h2>Ho Chi Mini City</h2>
+                    <address class="text-xs">13P John doe Street,Us</address>
+                  </div>
+                </li>
+                <li>
+                  <i class="fa-solid fa-envelope"></i>
+                  <p>codeaprogram@gmail.com</p>
+                </li>
+                <li>
+                  <i class="fa-solid fa-phone"></i>
+                  <p>+123 456 7890</p>
+                </li>
+              </ul>
+              <div
+                class="flex items-center md:justify-end justify-center dark:text-gray-200 text-gray-600 gap-6 mt-9"
+              >
+                <p class="text-xs">Follow Us</p>
+                <div class="flex justify-end gap-3">
+                  <a href="#" class="social-icon">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                  <a href="#" class="social-icon">
+                    <i class="fa-brands fa-linkedin"></i>
+                  </a>
+                  <a href="#" class="social-icon">
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="dark:bg-slate-700 bg-slate-100 text-center py-2">
+      Copyright &copy; 2024
+      <ul class="flex-center gap-5 py-4 text-sm">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">About Us</a>
+        </li>
+        <li><a href="#">Projects</a></li>
+        <li>
+          <a href="#">Contact Us</a>
+        </li>
+      </ul>
+    </footer>
+    <!-- <section>loe</section> -->
+    <script type="module" src="/main.js"></script>
+    <script>
+      const header = document.querySelector("header");
+
+      const toggleClasses = (element, classes, condition) => {
+        classes.forEach((className) => {
+          element.classList.toggle(className, condition);
+        });
+      };
+
+      window.addEventListener("scroll", () => {
+        toggleClasses(
+          header,
+          [
+            "shadow-lg",
+            "dark:sm:bg-slate-900",
+            "dark:bg-slate-800",
+            "dark:text-white",
+            "bg-white",
+          ],
+          window.scrollY > 0
+        );
+      });
+    </script>
+  </body>
+</html>
